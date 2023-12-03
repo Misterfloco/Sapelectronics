@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SAP Electronics</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #001f3f url('/Users/abdoulayebarry/Desktop/Pairagogie LOAD/PHOTO-2023-11-25-09-35-21.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #c0c0c0; /* Couleur argent */
+    }
+
+    header {
+      background-color: #001f3f;
+      color: #c0c0c0;
+      padding: 1em;
+      text-align: center;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #001f3f;
+      padding: 0.5em;
+    }
+
+    nav a {
+      color: #c0c0c0;
+      text-decoration: none;
+      padding: 1em;
+      margin: 0 1em;
+      cursor: pointer;
+    }
+
+    section {
+      display: none;
+      padding: 20px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: auto;
+      cursor: pointer;
+    }
+  </style>
+  <script>
+    function openTab(tabId) {
+      // Cacher toutes les sections
+      var sections = document.querySelectorAll('section');
+      sections.forEach(function(section) {
+        section.style.display = 'none';
+      });
+
+      // Afficher la section spécifique
+      var selectedSection = document.getElementById(tabId);
+      selectedSection.style.display = 'block';
+    }
+
+    function showImage(imageId) {
+      // Cacher toutes les sections sauf celle des images
+      var sections = document.querySelectorAll('section[id^="phone"], section[id^="tablet"], section[id^="computer"], section[id^="accessory"], section[id="resources"]');
+      sections.forEach(function(section) {
+        section.style.display = 'none';
+      });
+
+      // Afficher la section des images
+      var selectedImage = document.getElementById(imageId);
+      selectedImage.style.display = 'block';
+    }
+
+    function goBack() {
+      // Afficher la section principale des appareils
+      openTab('home');
+    }
+  </script>
+</head>
+<body>
+
+  <header>
+    <h1>SAP Electronics</h1>
+  </header>
+
+  <nav>
+    <a href="javascript:void(0);" onclick="openTab('company-info')">À propos de nous</a>
+    <a href="javascript:void(0);" onclick="openTab('phones')">Téléphones</a>
+    <a href="javascript:void(0);" onclick="openTab('computers')">Ordinateurs</a>
+    <a href="javascript:void(0);" onclick="openTab('tablets')">Tablettes</a>
+    <a href="javascript:void(0);" onclick="openTab('accessories')">Accessoires électroniques</a>
+    <a href="javascript:void(0);" onclick="openTab('resources')">Ressources Supplémentaires</a>
+  </nav>
+
+  <section id="company-info">
+    <h2>Informations sur l'entreprise</h2>
+    <p>Adresse: 82 Espl. Général de Gaulle, 92400 Courbevoie</p>
+    <p>Téléphone: +33 7 89 67 45 23</p>
+    <p>Réseau social: SAP.electronics</p>
+    <p>Mail: <a href="mailto:sapelectronics@gmail.com">sapelectronics@gmail.com</a></p>
+    <button onclick="goBack()">Retour</button>
+  </section>
+
+  <section id="home">
+    <!-- Contenu de l'accueil des appareils -->
+  </section>
+
+  <section id="phones">
+    <h2>Téléphones</h2>
+    <p onclick="showImage('universe2023')">SAP UNIVERSE 2023 - Prix : 1000€</p>
+    <p onclick="showImage('universe2022')">SAP UNIVERSE 2022 - Prix : 800€</p>
+    <p onclick="showImage('quantumX')">SAP Quantum X - Prix : 950€</p>
+    <p onclick="showImage('galaxyA2')">SAP Galaxy A2 - Prix : 900€</p>
+    <button onclick="goBack()">Retour</button>
+  </section>
+
+  <!-- Ajouter les sections pour les images ici -->
+  <section id="universe2023">
+    <img src="/Users/abdoulayebarry/Desktop/Pairagogie LOAD/a2d6e9e4ff784c4a97a48100732ddf31.webp" alt="SAP UNIVERSE 2023">
+    <button onclick="goBack()">Retour</button>
+  </section>
+
+  <section id="universe2022">
+    <img src="/Users/abdoulayebarry/Desktop/Pairagogie LOAD/5c0982b95d7f487c9d2f4fde3af9a5e8.webp" alt="SAP UNIVERSE 2022">
+    <button onclick="goBack()">Retour</button>
+  </section>
+
+  <section id="quantumX">
+    <img src="/Users/abdoulayebarry/Desktop/Pairagogie LOAD/f796a2791df9493c98dffdb6d22ce5e0.webp" alt="SAP Quantum X">
+    <button onclick="goBack()">Retour</button>
+  </section>
+
+  <section id="galaxyA2">
+    <img src="/Users/abdoulayebarry/Desktop/Pairagogie LOAD/78cc4dcb208b475aa2f08e30dc67b86c.webp" alt="SAP Galaxy A2">
+    <button onclick="goBack()">Retour</button>
+  </section>
+
+  <section id="tablets">
+    <h2>Tablettes</h2>
+    <p onclick="showImage('touchA1')">SAP TOUCH A1 - Prix : 900€</p>
+    <p onclick="showImage('touchA2')">SAP TOUCH A2 - Prix : 1000€</p>
+    <p onclick="showImage('tabVision')">SAP Tab Vision - Prix : 1000€</p>
+    <p onclick="showImage('tabLite')">SAP Tab Lite - Prix : 1200€</p>
+    <button onclick="goBack()">Retour</button>
+  </section>
+
+  <!-- Ajouter les sections pour les images ici -->
+  <section id="touchA1">
+    <img src="/Users/abdoulayebarry/Desktop/Pairagogie LOAD/75fc042e1395493794f0ffa812d45add.webp" alt="SAP TOUCH A1">
+    <button onclick="goBack()">Retour</button>
+  </section>
+
+  <section id="touchA2">
+    <img src="/Users/abdoulayebarry/Desktop/Pairagogie LOAD/ce710bb6dae342c0898ffdfead0fab2e.webp" alt="SAP TOUCH A2">
+    <button onclick="goBack()">Retour</button>
+  </section>
+
+  <section id="tabVision">
+    <img src="/Users/abdoulayebarry/Desktop/Pairagogie LOAD/1711905c94a348e2ab508c7f95c47c96.webp" alt="SAP Tab Vision">
+    <button onclick="goBack()">Retour</button>
+  </section>
+
+  <section id="tabLite">
+    <img src="/Users/abdoulayebarry/Desktop/Pairagogie LOAD/f20e67fa3a974ee08d2692b9f2498eab.webp" alt="SAP Tab Lite">
+    <button onclick="goBack()">Retour</button>
+  </section>
+
+  <section id="computers">
+    <h2>Ordinateurs</h2>
+    <p onclick="showImage('king1')">SAP KING 1 - Prix : 1300€</p>
+    <p onclick="showImage('king2')">SAP KING 2 - Prix : 1500€</p>
+    <p onclick="showImage('bookPro')">SAPBook Pro - Prix : 1500€</p>
+    <p onclick="showImage('station')">SAPStation - Prix : 1700€</p>
+    <button onclick="goBack()">Retour</button>
+  </section>
+
+  <!-- Ajouter les sections pour les images ici -->
+  <section id="king1">
+    <img src="/Users/abdoulayebarry/Desktop/Pairagogie LOAD/d166bff3305d472a8d8ab186b0381ac4.webp" alt="SAP KING 1">
+    <button onclick="goBack()">Retour</button>
+  </section>
+
+  <section id="king2">
+    <img src="/Users/abdoulayebarry/Desktop/Pairagogie LOAD/45c39e9ded2e4b7e89dbe274f5d6f03f.webp" alt="SAP KING 2">
+    <button onclick="goBack()">Retour</button>
+  </section>
+
+  <section id="bookPro">
+    <img src="/Users/abdoulayebarry/Desktop/Pairagogie LOAD/39a4fddd7d144441a85ec75dbd368044.webp" alt="SAPBook Pro">
+    <button onclick="goBack()">Retour</button>
+  </section>
+
+  <section id="station">
+    <img src="/Users/abdoulayebarry/Desktop/Pairagogie LOAD/a0ea92abd63b4ceabd782fc5f07fff0f.webp" alt="SAPStation">
+    <button onclick="goBack()">Retour</button>
+  </section>
+
+  <section id="accessories">
+    <h2>Accessoires électroniques</h2>
+    <p onclick="showImage('chargePro')">SAPCharge Pro - Prix : 50€</p>
+    <p onclick="showImage('fitTracker')">SAPFit Tracker - Prix : 145€</p>
+    <button onclick="goBack()">Retour</button>
+  </section>
+
+  <!-- Ajouter les sections pour les images ici -->
+  <section id="chargePro">
+    <img src="/Users/abdoulayebarry/Desktop/Pairagogie LOAD/c8cc4910c9a24b67a2939baa4a137516.webp" alt="SAPCharge Pro">
+    <button onclick="goBack()">Retour</button>
+  </section>
+
+  <section id="fitTracker">
+    <img src="/Users/abdoulayebarry/Desktop/Pairagogie LOAD/f116e1f4dadc452e98f382798d2c46ed.webp" alt="SAPFit Tracker">
+    <button onclick="goBack()">Retour</button>
+  </section>
+
+  <section id="resources">
+    <h2>Ressources Supplémentaires</h2>
+          <h2>Ressources Supplémentaires</h2>
+          <p>L'entreprise SAP, spécialisée dans la technologie et l'électronique, se prépare à s'adapter à la future réglementation de l'Union européenne, l'EU Product Passport (2030), qui impose le Passeport Produit Numérique (DPP). Cette réglementation concerne toutes les entités plaçant des produits sur le marché de l'UE, y compris les entreprises non européennes. Les secteurs spécifiquement réglementés par le DPP incluent les textiles, les batteries industrielles et l'électronique grand public.</p>
+          <p>Actuellement, chaque secteur est soumis à ses propres règles, créant une complexité dans la libre circulation des biens. La nouvelle réglementation vise à remédier à cette situation en instaurant des normes communes pour les produits, mettant particulièrement l'accent sur la durabilité environnementale. Cette transition vers une approche plus uniforme est motivée par la nécessité de faciliter la traçabilité et d'améliorer la durabilité des produits.</p>
+          <p>Pour s'adapter à ces changements, les entreprises, en particulier celles du secteur du textile, doivent désormais enregistrer électroniquement des informations détaillées sur leurs produits, couvrant l'ensemble du cycle de vie, des matières premières à la consommation, et jusqu'au recyclage. Ces nouvelles exigences nécessitent une identification unique et persistante des produits, une traçabilité plus approfondie et une anticipation des normes spécifiques du DPP d'ici 2030.</p>
+          <p>SAP, consciente de ces évolutions réglementaires, a élaboré un plan d'action solide pour garantir la conformité. Les ajustements nécessaires concernant l'enregistrement électronique des informations sur les produits, la mise en place d'une identification unique et persistante, et la mise en œuvre de pratiques conformes aux normes du DPP sont au cœur de cette stratégie.</p>
+          <p>L'entreprise SAP s'engage à travailler de près avec les autorités compétentes, les chambres de commerce et les associations industrielles pour faciliter une transition fluide vers la conformité au DPP. En tant que partenaire de confiance, SAP continuera à utiliser les normes d'identification, telles que le Global Trade Item Number (GTIN) de GS1, pour simplifier le processus de conformité.</p>
+          <p>En résumé, SAP est résolue à s'adapter à la réglementation future de l'UE en mettant en œuvre un plan d'action complet, garantissant ainsi la continuité de ses activités dans le respect des normes du Passeport Produit Numérique.</p>
+          <button onclick="goBack()">Retour</button>
+        </section>
+      
+        <script>
+          document.addEventListener("DOMContentLoaded", function() {
+            openTab('home');
+          });
+        </script>
+      </body>
+      </html>
+      
